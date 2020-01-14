@@ -1,0 +1,98 @@
+<div class="hbox hbox-auto-xs bg-white-only" >
+
+    <div class="col w-lg bg-light b-r bg-auto">
+        <div class="vbox">
+            <div class="wrapper-md dk b-b list-header-fix">
+                <div class="input-group md-form-group no-padder has-info m-t-n-sm">
+                    <span class="input-group-btn actions">
+                        <mat-icon class="m-r-sm" >search</mat-icon>
+                        <input type="text" matInput class="md-input m-b-n-sm no-shadow no-border no-bg" placeholder="Search Category ..." />
+                    </span>                    
+                </div>
+            </div>
+            <div class="row-row">
+                <div class="cell scrollable bg-whitesmoke" id="style-10" infinite-scroll="" can-load="canLoad" threshold="100">
+                    <div class="cell-inner" style="height:600px">                        
+                        <ul class="list-group no-radius no-border bg-auto m-b-none list-wrapper" >
+                            <li class="list-group-item" *ngFor="let category of categoryList" (click)="selectCategory(category)">
+                                <a mat-list-item class="text-ellipsis padder-v-xxs ease-all m-l-xs" >{{category.cat_name_f}}</a>
+                            </li>
+                        </ul>
+
+                        <div class="text-center pos-abt w-full" style="top:50%" [hidden]="categoryList.length>0"><span >No Category</span></div>
+                    </div>
+                </div>
+                <!-- <div class="cell scrollable bg-white-only" id="style-10" infinite-scroll="" can-load="canLoad" threshold="100">
+                    <div class="cell-inner" style="height:600px">
+                        <div class="list-group no-radius no-border bg-auto m-b-none list-wrapper">
+                            <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+                              <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
+                                <button mat-icon-button disabled></button>
+                                {{node.name}}
+                              </mat-tree-node>
+                              <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding>
+                                <button mat-icon-button matTreeNodeToggle
+                                        [attr.aria-label]="'toggle ' + node.name">
+                                  <mat-icon class="mat-icon-rtl-mirror">
+                                    {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+                                  </mat-icon>
+                                </button>
+                                {{node.name}}
+                              </mat-tree-node>
+                            </mat-tree>
+                        </div>
+                        <div class="text-center pos-abt w-full" style="top:50%" [hidden]="true"><span >No Category</span></div>
+                    </div>
+                </div> -->
+            </div>
+            <div class="wrapper dk b-t text-center">
+                <button mat-raised-button color="primary" (click)="newCategory()"><mat-icon class="m-r-sm" >add</mat-icon><span >New Category</span></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="col bg-white-only">
+        <div class="wrapper">
+            <div class="form-horizontal form-validation" >
+                <div class="padder-sm">
+                    <div class="form-group m-b-sm">
+                        <label class="col-sm-4 control-label"><span>Category Code :</span></label>
+                        <div class="col-sm-12">
+                            <input type="text" class="form-control " [(ngModel)]="categoryInfo.code_f" required />
+                        </div>
+                    </div>
+                </div>
+                <div class="padder-sm">
+                    <div class="form-group m-b-sm">
+                        <label class="col-sm-4 control-label"><span>Category Name :</span></label>
+                        <div class="col-sm-12">
+                            <input type="text" class="form-control" [(ngModel)]="categoryInfo.cat_name_f" required />
+                        </div>
+                    </div>
+                </div>
+                <div class="padder-sm">
+                    <div class="form-group m-b-md">
+                        <label class="col-sm-4 control-label"><span >Parent Category :</span></label>
+                        <div class="col-sm-12">
+                            <div class="input-group">
+                                <select name="reason" class="form-control">
+                                    <option [ngValue]="pcategory.cat_name_f" *ngFor="let pcategory of parentCategory">{{pcategory.cat_name_f}}</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="padder-sm">
+                    <div class="form-group m-t-md">
+                        <div class="m-l-md">
+                            <button type="submit" mat-raised-button class="btn m-b-xs btn-success m-r-sm" [hidden]="categoryInfo.id_f > 0" (click)="saveCategory()"><span>Save</span></button> 
+                            <button type="submit" mat-raised-button class="btn m-b-xs btn-info m-r-sm" [hidden]="!categoryInfo.id_f > 0" (click)="saveCategory()"><span>Update</span></button>
+                            <button mat-raised-button class="btn m-b-xs btn-danger" [hidden]="!categoryInfo.id_f > 0" (click)="deleteCategory()"><span>Delete</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

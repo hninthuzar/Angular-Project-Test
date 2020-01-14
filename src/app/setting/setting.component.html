@@ -1,0 +1,107 @@
+<mat-tab-group>
+    <mat-tab >
+      <ng-template mat-tab-label>
+        <mat-icon class="m-r-sm">history</mat-icon>
+        History
+      </ng-template>
+      <div class="m-t-lg " style="padding: 0 50px 50px 50px;">
+        <mat-card>
+          <mat-card-content>
+            <h2 class="example-h2">Slider configuration</h2>
+        
+            <section class="example-section">
+              <mat-form-field class="example-margin">
+                <input matInput type="number" placeholder="Value" [(ngModel)]="value">
+              </mat-form-field>
+              <mat-form-field class="example-margin">
+                <input matInput type="number" placeholder="Min value" [(ngModel)]="min">
+              </mat-form-field>
+              <mat-form-field class="example-margin">
+                <input matInput type="number" placeholder="Max value" [(ngModel)]="max">
+              </mat-form-field>
+              <mat-form-field class="example-margin">
+                <input matInput type="number" placeholder="Step size" [(ngModel)]="step">
+              </mat-form-field>
+            </section>
+        
+            <section class="example-section">
+              <mat-checkbox class="example-margin" [(ngModel)]="showTicks">Show ticks</mat-checkbox>
+              <mat-checkbox class="example-margin" [(ngModel)]="autoTicks" *ngIf="showTicks">
+                Auto ticks
+              </mat-checkbox>
+              <mat-form-field class="example-margin" *ngIf="showTicks && !autoTicks">
+                <input matInput type="number" placeholder="Tick interval" [(ngModel)]="tickInterval">
+              </mat-form-field>
+            </section>
+        
+            <section class="example-section">
+              <mat-checkbox class="example-margin" [(ngModel)]="thumbLabel">Show thumb label</mat-checkbox>
+            </section>
+        
+            <section class="example-section">
+              <mat-checkbox class="example-margin" [(ngModel)]="vertical">Vertical</mat-checkbox>
+              <mat-checkbox class="example-margin" [(ngModel)]="invert">Inverted</mat-checkbox>
+            </section>
+        
+            <section class="example-section">
+              <mat-checkbox class="example-margin" [(ngModel)]="disabled">Disabled</mat-checkbox>
+            </section>
+        
+          </mat-card-content>
+        </mat-card>
+        <mat-card class="result">
+          <mat-card-content>
+            <h2 class="example-h2">Result</h2>
+        
+            <mat-slider
+                class="example-margin"
+                [disabled]="disabled"
+                [invert]="invert"
+                [max]="max"
+                [min]="min"
+                [step]="step"
+                [thumbLabel]="thumbLabel"
+                [tickInterval]="tickInterval"
+                [(ngModel)]="value"
+                [vertical]="vertical">
+            </mat-slider>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </mat-tab>
+  
+    <mat-tab >
+      <ng-template mat-tab-label>
+        <mat-icon class="m-r-sm">feedback</mat-icon>
+        Feed Back
+      </ng-template>
+      <div class="m-t-lg m-l-md" style="padding: 0 50px 50px 50px;">
+        <mat-card>
+          <mat-card-content>
+            <h2 class="example-h2">Tooltip</h2>
+            <button mat-raised-button
+                    matTooltip="Info about the action"
+                    aria-label="Button that displays a tooltip when focused or hovered over" style="margin-right: 10px;">
+              Action
+            </button>
+            <button mat-raised-button
+                    matTooltip="Info about the action"
+                    matTooltipClass="example-tooltip-red"
+                    aria-label="Button that shows a red tooltip"
+                    class="m-l-lg">
+              Red-tooltip Action
+            </button>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </mat-tab>
+  
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <mat-icon class="m-r-sm">help</mat-icon>
+        Help
+      </ng-template>
+  
+      <div class="m-t-lg m-l-md">Content 3</div>
+    </mat-tab>
+  </mat-tab-group>

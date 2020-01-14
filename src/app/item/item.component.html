@@ -1,0 +1,94 @@
+<div class="hbox bg-white-only" >
+
+    <div class="col">
+        <div class="vbox">
+            <div class="wrapper padder-md">
+                <div class="form-group m-b-none">
+                    <button mat-raised-button color="primary" class="m-r-sm" (click)="newItem()"><mat-icon class="m-r-sm" >add</mat-icon><span>New Item</span></button>
+                    <button mat-raised-button class="btn-info" (click)="openItemListPoup()" >
+                        <mat-icon class="m-r-sm" >search</mat-icon><span>Filter By Item</span>
+                    </button>
+                </div>
+            </div>
+            <div class="row-row">
+                <div class="cell">
+                    <div class="cell-inner">
+                        <div class="wrapper-lg">
+                            <div name="frmItem" class="form-validation" novalidate>
+                                <!-- <div class="m-b-md" ng-controller="ImgCropCtrl">  
+                                    <div class="hbox hbox-auto-xs" ng-show = "myImage != ''">
+                                        <div class="col">
+                                            <div class="wrapper-sm bg-white m-r-xs">
+                                                <div class="bg-light" style="height:250px">
+                                                  <img-crop 
+                                                    image="myImage" 
+                                                    result-image="myCroppedImage"
+                                                    result-image-size="160"
+                                                    area-type="{{cropType}}"
+                                                  ></img-crop>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="inline wrapper-sm ">
+                                                <p> Cropped Image  </p>
+                                                <div class="bg-light b-a m-b-sm">
+                                                  <img ng-src="{{myCroppedImage}}" />
+                                                </div>
+                                                <button class="btn btn-danger m-b-sm" name="remove" ng-click="removeshow();"><i class="glyphicon glyphicon-trash"></i> Remove</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="thumb-lg m-b-xs">
+                                        <img img-resizer=""  ng-src="{{ imgSrc }}" ng-show = "myImage == ''" data-max-size="10kb" />
+                                    </div>
+                                    <div class="m-b-md">  
+                                        <input type="file" id="fileInput" ui-jq="filestyle"/>
+                                    </div>
+                                <div> -->
+                                <div class="row row-sm">
+                                    <div class="form-group col-md-6 m-b-sm">
+                                        <label><span>Item Code :</span></label>
+                                        <input type="text" id="itemCode" name="ItemCode" class="form-control" [(ngModel)]="itemInfo.code_f" required />
+                                    </div>
+                                    <div class="form-group col-md-6 m-b-sm">
+                                        <label><span >Item Name :</span></label>
+                                        <input type="text" id="itemName" name="ItemName" class="form-control" [(ngModel)]="itemInfo.name_f" required #itemName="ngModel"/>
+                                        <div [hidden]="itemName.valid || itemName.pristine" class="alert alert-danger">
+                                        Item Name is required</div>
+                                    </div>
+                                </div>
+                                <div class="row row-sm">
+                                    <div class="form-group col-md-6 m-b-sm">
+                                        <label><span >Category Name :</span></label>
+                                        <input type="text" id="unit" name="Unit" class="form-control" [(ngModel)]="itemInfo.cate_name_f"required />
+                                    </div>
+                                    <div class="form-group col-md-6 m-b-sm">
+                                        <label><span >Unit :</span></label>
+                                        <input type="text" id="unit" name="Unit" class="form-control " [(ngModel)]="itemInfo.unit_f" required />
+                                    </div>                                    
+                                </div>
+                                <div class="row row-sm">
+                                    <div class="form-group col-md-6 m-b-sm">
+                                        <label><span>Unit Price :</span></label>
+                                        <input type="number" id="purchase" name="unitPrice" class="form-control text-right" [(ngModel)]="itemInfo.price_f" required />
+                                    </div>
+                                    <div class="form-group col-md-6 m-b-sm">
+                                        <div><label class="hidden-sm hidden-xs">&nbsp;</label></div>
+                                        <mat-checkbox [(ngModel)]="itemInfo.inactive_f">Inactive </mat-checkbox>
+                                    </div>                                    
+                                </div>
+                                <div class="form-group m-b-sm text-right">
+                                    <button type="submit" mat-raised-button class="btn m-b-xs btn-success m-r-sm" [hidden]="itemInfo.id_f > 0" (click)="saveItemList()"><span>Save</span></button> 
+                                    <button type="submit" mat-raised-button class="btn m-b-xs btn-info m-r-sm" [hidden]="!itemInfo.id_f > 0" (click)="saveItemList()" ><span>Update</span></button>
+                                    <button mat-raised-button class="btn m-b-xs btn-danger" [hidden]="!itemInfo.id_f > 0" (click)="deleteItem()"><span>Delete</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>   
+    </div>
+
+</div>

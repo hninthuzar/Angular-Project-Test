@@ -1,0 +1,119 @@
+<div class="hbox bg-white-only" >
+
+  <div class="col">
+      <div class="vbox">
+          <div class="row-row">
+              <div class="cell">
+                  <div class="cell-inner">
+                      <div class="wrapper-lg">
+                          <div name="frmdashboard" class="form-validation" novalidate>
+                              <div class="text-center m-b-md">
+                                <h3> Welcome From Application </h3>
+                              </div>
+
+                              <div class="row row-sm">
+                                  <div class="form-group col-md-4 m-b-sm">
+                                    <mat-card>
+                                      <mat-card-content>
+                                        <h2 class="example-h2">Slider configuration</h2>
+
+                                        <section class="example-section">
+                                          <label class=""><b>Color :</b></label>
+                                          <mat-radio-group [(ngModel)]="color">
+                                            <mat-radio-button class="example-margin" value="primary">
+                                              Primary
+                                            </mat-radio-button>
+                                            <mat-radio-button class="example-margin" value="accent">
+                                              Accent
+                                            </mat-radio-button>
+                                            <mat-radio-button class="example-margin" value="warn">
+                                              Warn
+                                            </mat-radio-button>
+                                          </mat-radio-group>
+                                        </section>
+
+                                        <section class="example-section">
+                                          <mat-checkbox class="example-margin" [(ngModel)]="checked">Checked</mat-checkbox>
+                                        </section>
+
+                                        <section class="example-section">
+                                          <mat-checkbox class="example-margin" [(ngModel)]="disabled">Disabled</mat-checkbox>
+                                        </section>
+                                      </mat-card-content>
+                                    </mat-card>
+
+                                    <mat-card class="result">
+                                      <mat-card-content>
+                                        <h2 class="example-h2">Result</h2>
+
+                                        <section class="example-section">
+                                          <mat-slide-toggle
+                                              class="example-margin"
+                                              [color]="color"
+                                              [checked]="checked"
+                                              [disabled]="disabled">
+                                            Slide me!
+                                          </mat-slide-toggle>
+                                        </section>
+                                      </mat-card-content>
+                                    </mat-card>
+                                  </div>
+                                  <div class="form-group col-md-4 m-b-sm">
+                                    <mat-card class="example-card">
+                                      <mat-card-header>
+                                        <div mat-card-avatar class="example-header-image"></div>
+                                        <mat-card-title>Shiba Inu</mat-card-title>
+                                        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                                      </mat-card-header>
+                                      <img mat-card-image src="/img/shiba2.jpg" alt="Photo of a Shiba Inu">
+                                      <mat-card-content>
+                                        <p>
+                                          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+                                        </p>
+                                      </mat-card-content>
+                                      <!-- <mat-card-actions>
+                                        <button mat-button>LIKE</button>
+                                        <button mat-button>SHARE</button>
+                                      </mat-card-actions> -->
+                                    </mat-card>
+                                  </div> 
+
+                                  <div class="form-group col-md-4 m-b-sm">
+                                      <div class="form-search">
+                                        <input class="form-control" aria-label="Filter Search" placeholder="Filter">
+                                        <i class="material-icons">search</i>
+                                      </div>
+                                      <div class="col-sm-12 m-t-md">
+                                        <mat-form-field class="col-sm-6 example-ripple-form-field">
+                                          <input matInput [(ngModel)]="radius" type="number" placeholder="Radius">
+                                        </mat-form-field>
+                                        <mat-form-field class="col-sm-6 example-ripple-form-field">
+                                          <input matInput [(ngModel)]="colorr" type="text" placeholder="Color">
+                                        </mat-form-field>
+                                      </div>
+                                      <!-- <div class="col-sm-12 m-t-md">
+                                        <label class="col-sm-4">Radius</label>
+                                        <input [(ngModel)]="radius" type="number" placeholder="Radius">
+                                      </div>
+                                      <div class="col-sm-12 m-t-sm">
+                                          <label class="col-sm-4">Color</label>
+                                        <input [(ngModel)]="colorr" type="text" placeholder="Color">
+                                      </div> -->
+                                      <div class="example-ripple-container mat-elevation-z4 m-t-md m-l-md"
+                                          matRipple
+                                          [matRippleRadius]="radius"
+                                          [matRippleColor]="colorr">
+                                        Click me
+                                      </div>
+                                  </div>
+                                  
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+       </div>   
+  </div>
+
+</div>
