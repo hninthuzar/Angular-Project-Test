@@ -5,7 +5,7 @@
             <div class="wrapper padder-md">
                 <div class="form-group m-b-none">
                     <button mat-raised-button color="primary" class="m-r-sm" (click)="newSaleData()"><mat-icon class="m-r-sm" >add</mat-icon><span>New Invoice</span></button>
-                    <button mat-raised-button class="btn-info" >
+                    <button mat-raised-button class="btn-info" (click)="openSaleListPoup('salelist')">
                         <mat-icon class="m-r-sm" >search</mat-icon><span>Filter By Sale</span>
                     </button>
                 </div>
@@ -46,7 +46,7 @@
                                         <div class="input-group">
                                             <input type="text" class="form-control" [(ngModel)]="saleDataInfo.cust_name_f" required />
                                             <span class="input-group-btn">
-                                                <button mat-cust-button class="btn-info" style="padding-top: 3px; border-radius: 0px 4px 4px;">
+                                                <button mat-cust-button class="btn-info" style="padding-top: 3px; border-radius: 0px 4px 4px;" (click)="openSaleListPoup('customer')">
                                                     <mat-icon >search</mat-icon>
                                                 </button>
                                             </span>
@@ -54,19 +54,22 @@
                                     </div>                                    
                                 </div>
 
-                                <div class="form-group m-b-sm text-right">
-                                    <button type="submit" mat-raised-button class="btn m-b-xs btn-success m-r-sm"><span>Save</span></button> 
+                                <div class="form-group m-b-md text-right">
+                                    <button type="submit" mat-raised-button class="btn m-b-xs btn-success m-r-sm" (click)="openDialog()"><span>Save</span></button> 
                                     <button type="submit" mat-raised-button class="btn m-b-xs btn-info m-r-sm" ><span>Update</span></button>
                                     <button mat-raised-button class="btn m-b-xs btn-danger "><span>Delete</span></button>
                                 </div>
-                                <div>
-                                    <ejs-grid #grid [dataSource]='data' [selectionSettings]='selectionOptions' (rowSelected)='rowSelected($event)' [allowPaging]="true" [allowSorting]="true" [allowFiltering]="true" [pageSettings]='pageSettings' >
+                                <div class="m-t-md">
+                                    <ejs-grid #grid [dataSource]='data' [selectionSettings]='selectionOptions' (rowSelected)='rowSelected($event)' [allowPaging]="true" [allowSorting]="true" [allowFiltering]="true" [editSettings]='editSettings' [pageSettings]='pageSettings' >
                                         <e-columns>
-                                        <e-column field='id_f' headerText='ID' textAlign='Right' width=80></e-column>
-                                        <e-column field='CustomerName' headerText='Customer Name' ></e-column>
-                                        <e-column field='Type' headerText='Type'></e-column>
-                                        <e-column field='ShipCity' headerText='Ship City' ></e-column>
+                                        <e-column field='id_f' headerText='Item Code' textAlign='Right' isPrimaryKey='true' width=120></e-column>
+                                        <e-column field='CustomerName' headerText='Item Name' isPrimaryKey='true'></e-column>
+                                        <e-column field='Type' headerText='Unit' isPrimaryKey='true'></e-column>                                        
                                         <e-column field='SalePrice' headerText='Sale Price' width=150 [customAttributes]="{class: 'e-attr'}" format='C2' ></e-column>
+                                        <e-column field='ShipCity' headerText='Quantity' ></e-column>
+                                        <e-column field='dis_per_f' headerText='Dis Per' ></e-column>
+                                        <e-column field='dis_amt_f' headerText='Dis Amt ' ></e-column>
+                                        <e-column field='total_amt_f' headerText='Total Amount' ></e-column>
                                         <!-- <e-column field='SalePrice' headerText='Sale Price' width=150 [customAttributes]="{class: 'e-attr'}"></e-column>                                         -->
                                         </e-columns>
                                     </ejs-grid>

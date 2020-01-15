@@ -1,1 +1,28 @@
-<p>dailogsalepopup works!</p>
+
+<h1 mat-dialog-title>{{data[0]}}</h1>
+<div mat-dialog-content>
+    <p [hidden]="data[3]==true">{{data[1]}}</p>
+    <ejs-grid #grid [dataSource]='data[1]' [hidden]="data[4] == true" height='350px' (rowSelected)='rowSelectedCust($event)' [allowPaging]="false" [allowSorting]="true" [allowFiltering]="true" [pageSettings]='pageSettings' *ngIf="data[3]==true">
+        <e-columns>
+        <e-column field='id_f' headerText='ID' width=80></e-column>
+        <e-column field='code_f' headerText='Inv No.' ></e-column>
+        <e-column field='name_f' headerText='Date' ></e-column>
+        <e-column field='cust_name_f' headerText='Customer Name' format='C2' ></e-column>
+        <e-column field='unit_f' headerText='Net Amount' ></e-column>        
+        </e-columns>
+    </ejs-grid>
+    <ejs-grid #grid2 [dataSource]='data[1]' [hidden]="data[4] != true" (rowSelected)='rowSelectedCust($event)' [allowPaging]="false" [allowSorting]="true" [allowFiltering]="true" *ngIf="data[3]==true">
+        <e-columns>
+        <e-column field='id_f' headerText='ID' textAlign='Right' width=80></e-column>
+        <e-column field='code_f' headerText='Customer Code' ></e-column>
+        <e-column field='name_f' headerText='Customer Name' ></e-column>
+        <e-column field='cate_name_f' headerText='Category Name' format='C2' ></e-column>
+        <e-column field='unit_f' headerText='Unit' ></e-column>
+        <e-column field='price_f' headerText='Unit Price' ></e-column>        
+        </e-columns>
+    </ejs-grid>
+</div>
+<div mat-dialog-actions>
+    <button mat-button *ngIf="data[2]==true" (click)="onNoClick()" >Cancel</button>
+    <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
+</div>
