@@ -75,8 +75,9 @@
                         <label class="col-sm-4 control-label"><span >Parent Category :</span></label>
                         <div class="col-sm-12">
                             <div class="input-group">
-                                <select name="reason" class="form-control">
-                                    <option [ngValue]="pcategory.cat_name_f" *ngFor="let pcategory of parentCategory">{{pcategory.cat_name_f}}</option>
+                                <select name="reason" class="form-control" [(ngModel)]="categoryInfo.parent_id_f" [disabled]="categoryInfo.parent_id_f == 0">
+                                    <option [ngValue]="0" >... Parent Category ...</option>
+                                    <option [ngValue]="pcategory.id_f" *ngFor="let pcategory of parentCategory">{{pcategory.cat_name_f}}</option>
                                 </select>
                             </div>
                         </div>

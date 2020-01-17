@@ -79,11 +79,11 @@ parentCategory = [];
   // hasChild = (_: number, node: ExampleFlatNode) => node.expandable;
 
   constructor() { 
-    this.categoryList.push({ 'id_f':1,'code_f': 'C_001','cat_name_f': 'Food','parent_id_f': '0' });
-    this.categoryList.push({ 'id_f':2,'code_f': 'C_002','cat_name_f': 'Snack','parent_id_f': '0' });
-    this.categoryList.push({ 'id_f':3,'code_f': 'C_003','cat_name_f': 'Cool Drink ','parent_id_f': '1'});
-    this.categoryList.push({ 'id_f':4,'code_f': 'C_004','cat_name_f': 'Hot Drink','parent_id_f': '2' });
-    this.categoryList.push({ 'id_f':5,'code_f': 'C_005','cat_name_f': 'Water' ,'parent_id_f': '1'});
+    this.categoryList.push({ 'id_f':1,'code_f': 'C_001','cat_name_f': 'Food','parent_id_f': 0 });
+    this.categoryList.push({ 'id_f':2,'code_f': 'C_002','cat_name_f': 'Snack','parent_id_f':0 });
+    this.categoryList.push({ 'id_f':3,'code_f': 'C_003','cat_name_f': 'Cool Drink ','parent_id_f': 1});
+    this.categoryList.push({ 'id_f':4,'code_f': 'C_004','cat_name_f': 'Hot Drink','parent_id_f': 2 });
+    this.categoryList.push({ 'id_f':5,'code_f': 'C_005','cat_name_f': 'Water' ,'parent_id_f': 1});
 
     this.parentCategory = this.categoryList;
   }

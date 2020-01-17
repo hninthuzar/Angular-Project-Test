@@ -60,9 +60,9 @@
                                     <button mat-raised-button class="btn m-b-xs btn-danger "><span>Delete</span></button>
                                 </div>
                                 <div class="m-t-md">
-                                    <ejs-grid #grid [dataSource]='data' [selectionSettings]='selectionOptions' (rowSelected)='rowSelected($event)' [allowPaging]="true" [allowSorting]="true" [allowFiltering]="true" [editSettings]='editSettings' [pageSettings]='pageSettings' >
+                                    <ejs-grid #grid [dataSource]='data' [selectionSettings]='selectionOptions' (rowSelected)='rowSelected($event)' [toolbar]='toolbar' [allowPaging]="true" [allowSorting]="true" [allowFiltering]="true" [editSettings]='editSettings' [pageSettings]='pageSettings' >
                                         <e-columns>
-                                        <e-column field='id_f' headerText='Item Code' textAlign='Right' isPrimaryKey='true' width=120></e-column>
+                                        <e-column field='id_f' headerText='Item Code' textAlign='Right' width=120></e-column>
                                         <e-column field='CustomerName' headerText='Item Name' isPrimaryKey='true'></e-column>
                                         <e-column field='Type' headerText='Unit' isPrimaryKey='true'></e-column>                                        
                                         <e-column field='SalePrice' headerText='Sale Price' width=150 [customAttributes]="{class: 'e-attr'}" format='C2' ></e-column>

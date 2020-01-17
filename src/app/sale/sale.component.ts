@@ -1,7 +1,7 @@
 import { Component, OnInit , ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { GridComponent, RowSelectEventArgs } from '@syncfusion/ej2-angular-grids';
-import { PageSettingsModel,SelectionSettingsModel ,EditSettingsModel } from '@syncfusion/ej2-angular-grids';
+import { PageSettingsModel,SelectionSettingsModel ,EditSettingsModel,ToolbarItems  } from '@syncfusion/ej2-angular-grids';
 import { DailogsalepopupComponent } from '../dailogsalepopup/dailogsalepopup.component';
 
   // export interface Tile {
@@ -26,6 +26,7 @@ export class SaleComponent implements OnInit {
   public customerDataList = [];
   public salepopup ;
   public editSettings: EditSettingsModel;
+  public toolbar: ToolbarItems[];
 
   constructor(public dialog: MatDialog) {
     this.data.push({ id_f: 1,CustomerName: "Maung Maung",Type: "Daimond",ShipCity : "Yangon",SalePrice: 1500},
@@ -62,6 +63,7 @@ export class SaleComponent implements OnInit {
     this.pageSettings = { pageSize: 6 };
     this.selectionOptions = { type: 'Multiple', enableSimpleMultiRowSelection: false };
     this.editSettings = { allowEditing: true, allowAdding: true, allowDeleting: true };
+    this.toolbar = ['Add', 'Edit', 'Delete', 'Update', 'Cancel'];
     this.saleDataInfo['date_f'] = new Date();
   }
   openDialog(): void {

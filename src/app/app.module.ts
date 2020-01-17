@@ -19,7 +19,7 @@ import { SettingComponent } from './setting/setting.component';
 import { HelpingComponent } from './helping/helping.component';
 import { DailogpopupComponent } from './dailogpopup/dailogpopup.component';
 import { CustomerService } from './customer/customer.service';
-import { GridModule, PagerModule, PageService,SortService, FilterService ,EditService } from '@syncfusion/ej2-angular-grids';
+import { GridModule, PagerModule, PageService,SortService, FilterService ,EditService,ToolbarService } from '@syncfusion/ej2-angular-grids';
 import { DailogsalepopupComponent } from './dailogsalepopup/dailogsalepopup.component';
 
 @NgModule({
@@ -49,7 +49,7 @@ import { DailogsalepopupComponent } from './dailogsalepopup/dailogsalepopup.comp
   ],
   entryComponents: [ DailogpopupComponent,DailogsalepopupComponent],
   providers: [
-    CustomerService,PageService,SortService, FilterService,EditService
+    CustomerService,PageService,SortService, FilterService,EditService,ToolbarService
   ],
   bootstrap: [AppComponent]
 })
