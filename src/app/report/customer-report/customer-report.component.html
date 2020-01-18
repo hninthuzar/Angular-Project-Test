@@ -1,0 +1,33 @@
+<div class="hbox bg-white-only" >
+
+    <div class="col">
+        <div class="vbox">
+            <div class="row-row">
+                <div class="cell">
+                    <div class="cell-inner">
+                        <div class="wrapper-lg">
+                            <div name="frmdashboard" class="form-validation" novalidate>
+                                <div class="text-center m-b-md">
+                                  <h3> Welcome From Customer Report </h3>
+                                </div>
+  
+                                <div class="row row-sm">
+                                    <ejs-grid #grid id='Grid' [dataSource]='customerdata' height='270px' [toolbar]='toolbar' [allowExcelExport]='true' (toolbarClick)='toolbarClick($event)' >
+                                        <e-columns>
+                                            <e-column field='id_f' headerText='ID' textAlign='Right' width=80></e-column>
+                                            <e-column field='code_f' headerText='Customer Code' ></e-column>
+                                            <e-column field='name_f' headerText='Customer Name' ></e-column>
+                                            <e-column field='address_f' headerText='Address' ></e-column>
+                                            <e-column field='phone_f' headerText='Phone Number' ></e-column>        
+                                        </e-columns>
+                                    </ejs-grid>                                  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>   
+    </div>
+  
+  </div>

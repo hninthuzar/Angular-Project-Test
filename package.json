@@ -23,6 +23,7 @@
     "@angular/router": "~8.2.14",
     "@lidorsystems/integralui-web": "19.3.0",
     "@syncfusion/ej2-angular-grids": "^17.4.41",
+    "@syncfusion/ej2-angular-navigations": "^17.4.43",
     "@syncfusion/ej2-material-theme": "~17.4.40",
     "bootstrap": "^4.4.1",
     "hammerjs": "^2.0.8",

@@ -19,8 +19,11 @@ import { SettingComponent } from './setting/setting.component';
 import { HelpingComponent } from './helping/helping.component';
 import { DailogpopupComponent } from './dailogpopup/dailogpopup.component';
 import { CustomerService } from './customer/customer.service';
-import { GridModule, PagerModule, PageService,SortService, FilterService ,EditService,ToolbarService } from '@syncfusion/ej2-angular-grids';
+import { GridModule, PagerModule, PageService,SortService, FilterService ,EditService,ToolbarService,ExcelExportService  } from '@syncfusion/ej2-angular-grids';
 import { DailogsalepopupComponent } from './dailogsalepopup/dailogsalepopup.component';
+import { CustomerReportComponent } from './report/customer-report/customer-report.component';
+import { AccordionModule, ToolbarModule, ContextMenuModule, TabModule, TreeViewModule, SidebarModule, MenuModule } from '@syncfusion/ej2-angular-navigations';
+import { ItemReportComponent } from './report/item-report/item-report.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,9 @@ import { DailogsalepopupComponent } from './dailogsalepopup/dailogsalepopup.comp
     SettingComponent,
     HelpingComponent,
     DailogpopupComponent,
-    DailogsalepopupComponent
+    DailogsalepopupComponent,
+    CustomerReportComponent,
+    ItemReportComponent
   ],
   imports: [
     BrowserModule,
@@ -45,11 +50,11 @@ import { DailogsalepopupComponent } from './dailogsalepopup/dailogsalepopup.comp
     HttpClientModule,
     MatNativeDateModule,
     IntegralUIModule,
-    GridModule, PagerModule
+    GridModule, PagerModule, AccordionModule, ToolbarModule, ContextMenuModule, TabModule, TreeViewModule, SidebarModule, MenuModule
   ],
   entryComponents: [ DailogpopupComponent,DailogsalepopupComponent],
   providers: [
-    CustomerService,PageService,SortService, FilterService,EditService,ToolbarService
+    CustomerService,PageService,SortService, FilterService,EditService,ToolbarService,ExcelExportService 
   ],
   bootstrap: [AppComponent]
 })
