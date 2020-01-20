@@ -10,9 +10,18 @@
                                 <div class="text-center m-b-md">
                                   <h3> Welcome From Item Report </h3>
                                 </div>
-  
                                 <div class="row row-sm">
-                                    <ejs-grid #grid id='Grid' [dataSource]='itemdata' height='270px' [toolbar]='toolbar' [allowExcelExport]='true' (toolbarClick)='toolbarClick($event)' >
+                                    <div class="form-group col-sm-6 m-b-sm">
+                                        <div><label class="hidden-sm hidden-xs">&nbsp;</label></div>
+                                        <mat-checkbox [(ngModel)]="inactive_f">Include Inactive Item </mat-checkbox>
+                                    </div>
+                                    <div class="form-group col-sm-6 m-b-sm text-right">
+                                        <div><label class="hidden-sm hidden-xs">&nbsp;</label></div>
+                                        <button type="submit" mat-raised-button class="btn m-b-xs btn-info m-r-sm" (click)="getItemList()"><span>View</span></button> 
+                                    </div>                                    
+                                </div>
+                                <div class="row row-sm">
+                                    <ejs-grid #grid id='Grid' [dataSource]='data' height='400px' [toolbar]='toolbar' [allowExcelExport]='true' (toolbarClick)='toolbarClick($event)' >
                                         <e-columns>
                                             <e-column field='id_f' headerText='ID' textAlign='Right' width=80></e-column>
                                             <e-column field='code_f' headerText='Item Code' ></e-column>

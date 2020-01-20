@@ -1,0 +1,54 @@
+<div class="hbox bg-white-only" >
+
+    <div class="col">
+        <div class="vbox">
+            <div class="row-row">
+                <div class="cell">
+                    <div class="cell-inner">
+                        <div class="wrapper-lg">
+                            <div name="frmdashboard" class="form-validation" novalidate>
+                                <div class="text-center m-b-md">
+                                  <h3> Welcome From Sale Report </h3>
+                                </div>
+                                <div class="row row-sm m-t-sm">
+                                    <div class="form-group col-sm-5 m-b-sm">
+                                        <label class="m-r-md">Choose Start Date :</label>
+                                        <mat-form-field>
+                                            <input matInput [matDatepicker]="startDatepicker" [(ngModel)]="rptoption.start_date_f">
+                                            <mat-datepicker-toggle matSuffix [for]="startDatepicker"></mat-datepicker-toggle>
+                                            <mat-datepicker #startDatepicker></mat-datepicker>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="form-group col-sm-5 m-b-sm">
+                                        <label class="m-r-md">Choose End Date :</label>
+                                        <mat-form-field>
+                                            <input matInput [matDatepicker]="endDatepicker" [(ngModel)]="rptoption.end_date_f">
+                                            <mat-datepicker-toggle matSuffix [for]="endDatepicker"></mat-datepicker-toggle>
+                                            <mat-datepicker #endDatepicker></mat-datepicker>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="form-group col-sm-2 m-b-sm text-right m-t-sm">
+                                        <button type="submit" mat-raised-button class="btn m-b-xs btn-info m-r-sm" (click)="viewSaleList()"><span>View</span></button> 
+                                    </div>                                    
+                                </div>
+                                <div class="row row-sm">
+                                    <ejs-grid #grid id='Grid' [dataSource]='saledata' height='400px' [toolbar]='toolbar' [allowExcelExport]='true' (toolbarClick)='toolbarClick($event)' >
+                                        <e-columns>
+                                            <e-column field='id_f' headerText='ID' textAlign='Right' width=80></e-column>
+                                            <e-column field='code_f' headerText='Date' ></e-column>
+                                            <e-column field='cat_name_f' headerText='Customer Name' ></e-column>
+                                            <e-column field='address_f' headerText='Address' ></e-column>
+                                            <e-column field='phone_f' headerText='Phone Number' ></e-column>
+                                            <e-column field='phone_f' headerText='Total Amount' ></e-column>        
+                                        </e-columns>
+                                    </ejs-grid>                                  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>   
+    </div>
+  
+  </div>

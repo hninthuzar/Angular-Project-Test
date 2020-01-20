@@ -10,6 +10,8 @@ import { SettingComponent } from './setting/setting.component';
 import { HelpingComponent } from './helping/helping.component';
 import { CustomerReportComponent } from './report/customer-report/customer-report.component';
 import { ItemReportComponent } from './report/item-report/item-report.component';
+import { CategoryReportComponent } from './report/category-report/category-report.component';
+import { SaleReportComponent } from './report/sale-report/sale-report.component';
 
 export const routes: Routes = [  { path: '', pathMatch: 'full', redirectTo: 'pos/dashboard' },
                              { path: 'pos/dashboard', component: DashboardComponent },                       
@@ -20,7 +22,9 @@ export const routes: Routes = [  { path: '', pathMatch: 'full', redirectTo: 'pos
                              { path: 'pos/setting', component: SettingComponent },
                              { path: 'pos/helping', component: HelpingComponent },
                              { path: 'report/customerReport', component: CustomerReportComponent },
-                             { path: 'report/itemReport', component: ItemReportComponent }
+                             { path: 'report/itemReport', component: ItemReportComponent },
+                             { path: 'report/categoryReport', component: CategoryReportComponent },
+                             { path: 'report/saleReport', component: SaleReportComponent }
                         ];
 
 @NgModule({

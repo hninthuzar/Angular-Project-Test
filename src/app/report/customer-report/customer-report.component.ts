@@ -13,11 +13,11 @@ export class CustomerReportComponent implements OnInit {
   @ViewChild('grid', {static: true}) public grid: GridComponent;
 
   constructor() { 
-    this.customerdata.push({ 'id_f':1,'name_f': 'Hnin Hnin','address_f': 'YGN','phone_f': '090909' },
-                                { 'id_f':2,'name_f': 'Aung Aung','address_f': 'YGN','phone_f': '010101' },
-                                { 'id_f':3,'name_f': 'Soe Soe ','address_f': 'Taungoo','phone_f': '080808'},
-                                { 'id_f':4,'name_f': 'Thu Zar','address_f': 'Bgo','phone_f': '858585' },
-                                { 'id_f':5,'name_f': 'Soe Moe' ,'address_f': 'Bgo','phone_f': '787878'});
+    this.customerdata.push({ 'id_f':1,'code_f': 'C-001','name_f': 'Hnin Hnin','address_f': 'YGN','phone_f': '090909' },
+                                { 'id_f':2,'code_f': 'C-002','name_f': 'Aung Aung','address_f': 'YGN','phone_f': '010101' },
+                                { 'id_f':3,'code_f': 'C-003','name_f': 'Soe Soe ','address_f': 'Taungoo','phone_f': '080808'},
+                                { 'id_f':4,'code_f': 'C-004','name_f': 'Thu Zar','address_f': 'Bgo','phone_f': '858585' },
+                                { 'id_f':5,'code_f': 'C-005','name_f': 'Soe Moe' ,'address_f': 'Bgo','phone_f': '787878'});
   }
 
   ngOnInit() {

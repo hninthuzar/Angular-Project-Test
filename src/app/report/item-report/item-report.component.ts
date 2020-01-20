@@ -10,7 +10,9 @@ import { ClickEventArgs } from '@syncfusion/ej2-angular-navigations';
 export class ItemReportComponent implements OnInit {
 
   public itemdata  = [];
+  public data  = [];
   public toolbar: ToolbarItems[];
+  public inactive_f:boolean;
 
   @ViewChild('grid', {static: true}) public grid: GridComponent;
 
@@ -26,13 +28,24 @@ export class ItemReportComponent implements OnInit {
    }
 
   ngOnInit() {
+    this.inactive_f = true;
     this.toolbar = ['Print','ExcelExport', 'Search'];
+    this.getItemList();
   }
 
   toolbarClick(args: ClickEventArgs): void {
     if (args.item.id === 'Grid_excelexport') { // 'Grid_excelexport' -> Grid component id + _ + toolbar item name
         this.grid.excelExport();
     }
+  }
+
+  getItemList(): void{
+    if(this.inactive_f){
+      this.data = this.itemdata;
+    }else{
+      this.data = this.itemdata.filter(x=> x.inactive_f == this.inactive_f);
+    }    
+    console.log(this.inactive_f);
   }
 
 }

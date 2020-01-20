@@ -24,6 +24,8 @@ import { DailogsalepopupComponent } from './dailogsalepopup/dailogsalepopup.comp
 import { CustomerReportComponent } from './report/customer-report/customer-report.component';
 import { AccordionModule, ToolbarModule, ContextMenuModule, TabModule, TreeViewModule, SidebarModule, MenuModule } from '@syncfusion/ej2-angular-navigations';
 import { ItemReportComponent } from './report/item-report/item-report.component';
+import { CategoryReportComponent } from './report/category-report/category-report.component';
+import { SaleReportComponent } from './report/sale-report/sale-report.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { ItemReportComponent } from './report/item-report/item-report.component'
     DailogpopupComponent,
     DailogsalepopupComponent,
     CustomerReportComponent,
-    ItemReportComponent
+    ItemReportComponent,
+    CategoryReportComponent,
+    SaleReportComponent
   ],
   imports: [
     BrowserModule,
