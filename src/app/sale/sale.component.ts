@@ -42,14 +42,14 @@ export class SaleComponent implements OnInit {
     { id_f: 11,CustomerName: "Lin Lae",Type: "Gold",ShipCity : "Bagan",SalePrice: 1300},
     { id_f: 12,CustomerName: "Shwe Mhone",Type: "Gold",ShipCity : "Bagan",SalePrice: 1100},);
 
-    this.itemDataList.push({ id_f: 1,code_f : "I-001",name_f: "Food",cate_name_f: "Daimond",unit_f : "Yangon" ,price_f:1500,inactive_f :false},
-    { id_f: 2,code_f : "I-002",name_f: "Meal",cate_name_f: "Silver",unit_f : "Yangon",price_f:1200,inactive_f :false},
-    { id_f: 3,code_f : "I-003",name_f: "Snack",cate_name_f: "Daimond",unit_f : "Yangon",price_f:1000,inactive_f :false},
-    { id_f: 4,code_f : "I-004",name_f: "Sweet Drink",cate_name_f: "Silver",unit_f : "Yangon",price_f:1700,inactive_f :false},
-    { id_f: 5,code_f : "I-005",name_f: "Purified Water",cate_name_f: "Daimond",unit_f : "Yangon",price_f:2000,inactive_f :false},
-    { id_f: 6,code_f : "I-006",name_f: "Lux France",cate_name_f: "Silver",unit_f : "Yangon",price_f:1000,inactive_f :false},
-    { id_f: 7,code_f : "I-007",name_f: "Toothbash",cate_name_f: "Gold",unit_f : "Yangon",price_f:1200,inactive_f :false},
-    { id_f: 8,code_f : "I-008",name_f: "Chochin",cate_name_f: "Gold",unit_f : "Yangon",price_f:1500,inactive_f :false});
+    this.itemDataList.push({ id_f: 1,code_f : "I-001",name_f: "Food",cate_name_f: "Daimond",unit_f : "Yangon" ,price_f:1500,qty_f: 3,dis_per_f: 0,dis_amt_f: 0,inactive_f :false},
+    { id_f: 2,code_f : "I-002",name_f: "Meal",cate_name_f: "Silver",unit_f : "Yangon",price_f:1200,qty_f: 3,dis_per_f: 0,dis_amt_f: 0,inactive_f :false},
+    { id_f: 3,code_f : "I-003",name_f: "Snack",cate_name_f: "Daimond",unit_f : "Yangon",price_f:1000,qty_f: 2,dis_per_f: 0,dis_amt_f: 0,inactive_f :false},
+    { id_f: 4,code_f : "I-004",name_f: "Sweet Drink",cate_name_f: "Silver",unit_f : "Yangon",price_f:1700,qty_f: 1,dis_per_f: 0,dis_amt_f: 0,inactive_f :false},
+    { id_f: 5,code_f : "I-005",name_f: "Purified Water",cate_name_f: "Daimond",unit_f : "Yangon",price_f:2000,qty_f: 10,dis_per_f: 0,dis_amt_f: 0,inactive_f :false},
+    { id_f: 6,code_f : "I-006",name_f: "Lux France",cate_name_f: "Silver",unit_f : "Yangon",price_f:1000,qty_f: 2,dis_per_f: 0,dis_amt_f: 0,inactive_f :false},
+    { id_f: 7,code_f : "I-007",name_f: "Toothbash",cate_name_f: "Gold",unit_f : "Yangon",price_f:1200,qty_f: 6,dis_per_f: 0,dis_amt_f: 0,inactive_f :false},
+    { id_f: 8,code_f : "I-008",name_f: "Chochin",cate_name_f: "Gold",unit_f : "Yangon",price_f:1500,qty_f: 5,dis_per_f: 0,dis_amt_f: 0,inactive_f :false});
     
     this.customerDataList.push({ 'id_f':1,'name_f': 'Hnin Hnin','address_f': 'YGN','phone_f': '090909' },
                                 { 'id_f':2,'name_f': 'Aung Aung','address_f': 'YGN','phone_f': '010101' },
@@ -62,7 +62,7 @@ export class SaleComponent implements OnInit {
   ngOnInit() {
     this.pageSettings = { pageSize: 6 };
     this.selectionOptions = { type: 'Multiple', enableSimpleMultiRowSelection: false };
-    this.editSettings = { allowEditing: true, allowAdding: true, allowDeleting: true };
+    this.editSettings = { allowEditing: true, allowAdding: true, allowDeleting: true , newRowPosition: 'Bottom'};
     this.toolbar = ['Add', 'Edit', 'Delete', 'Update', 'Cancel'];
     this.saleDataInfo['date_f'] = new Date();
   }
