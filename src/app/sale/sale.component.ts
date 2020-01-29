@@ -29,18 +29,18 @@ export class SaleComponent implements OnInit {
   public toolbar: ToolbarItems[];
 
   constructor(public dialog: MatDialog) {
-    this.data.push({ id_f: 1,CustomerName: "Maung Maung",Type: "Daimond",ShipCity : "Yangon",SalePrice: 1500},
-    { id_f: 2,CustomerName: "Aung Aung",Type: "Silver",ShipCity : "Bagan",SalePrice: 100},
-    { id_f: 3,CustomerName: "Hla Hla",Type: "Daimond",ShipCity : "Yangon",SalePrice: 100},
-    { id_f: 4,CustomerName: "Hnin Hnin",Type: "Silver",ShipCity : "Yangon",SalePrice: 1200},
-    { id_f: 5,CustomerName: "Mya Mya",Type: "Daimond",ShipCity : "Bago",SalePrice: 2000},
-    { id_f: 6,CustomerName: "Khaing Khaing",Type: "Silver",ShipCity : "Bagan",SalePrice: 2000},
-    { id_f: 7,CustomerName: "Po Po",Type: "Gold",ShipCity : "Bago",SalePrice: 1300},
-    { id_f: 8,CustomerName: "Hsu Hsu",Type: "Gold",ShipCity : "Yangon",SalePrice: 1100},
-    { id_f: 9,CustomerName: "Thu Zar",Type: "Daimond",ShipCity : "Bago",SalePrice: 2000},
-    { id_f: 10,CustomerName: "Myo Myo",Type: "Silver",ShipCity : "Bago",SalePrice: 2000},
-    { id_f: 11,CustomerName: "Lin Lae",Type: "Gold",ShipCity : "Bagan",SalePrice: 1300},
-    { id_f: 12,CustomerName: "Shwe Mhone",Type: "Gold",ShipCity : "Bagan",SalePrice: 1100},);
+    this.data.push({ id_f: 1,cust_name_f: "Maung Maung",Type: "Daimond",date_f : new Date(),net_amount_f: 1500},
+    { id_f: 2,cust_name_f: "Aung Aung",Type: "Silver",date_f : new Date(2019,3,1),net_amount_f: 100},
+    { id_f: 3,cust_name_f: "Hla Hla",Type: "Daimond",date_f : new Date(2019,4,3),net_amount_f: 100},
+    { id_f: 4,cust_name_f: "Hnin Hnin",Type: "Silver",date_f : new Date(2019,5,5),net_amount_f: 1200},
+    { id_f: 5,cust_name_f: "Mya Mya",Type: "Daimond",date_f : new Date(),net_amount_f: 2000},
+    { id_f: 6,cust_name_f: "Khaing Khaing",Type: "Silver",date_f : new Date(),net_amount_f: 2000},
+    { id_f: 7,cust_name_f: "Po Po",Type: "Gold",date_f : new Date(),net_amount_f: 1300},
+    { id_f: 8,cust_name_f: "Hsu Hsu",Type: "Gold",date_f : new Date(),net_amount_f: 1100},
+    { id_f: 9,cust_name_f: "Thu Zar",Type: "Daimond",date_f : new Date(2020,3,1),net_amount_f: 2000},
+    { id_f: 10,cust_name_f: "Myo Myo",Type: "Silver",date_f : new Date(),net_amount_f: 2000},
+    { id_f: 11,cust_name_f: "Lin Lae",Type: "Gold",date_f : new Date(),net_amount_f: 1300},
+    { id_f: 12,cust_name_f: "Shwe Mhone",Type: "Gold",date_f : new Date(),net_amount_f: 1100},);
 
     this.itemDataList.push({ id_f: 1,code_f : "I-001",name_f: "Food",cate_name_f: "Daimond",unit_f : "Yangon" ,price_f:1500,qty_f: 3,dis_per_f: 0,dis_amt_f: 0,inactive_f :false},
     { id_f: 2,code_f : "I-002",name_f: "Meal",cate_name_f: "Silver",unit_f : "Yangon",price_f:1200,qty_f: 3,dis_per_f: 0,dis_amt_f: 0,inactive_f :false},
@@ -85,11 +85,13 @@ export class SaleComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       if(val == 'customer'){  
-        this.saleDataInfo['cust_id_f'] = result.customerData.id_f;
-        this.saleDataInfo['cust_name_f'] = result.customerData.name_f;
-      }else if(val == 'sale'){
-        // this.saleDataInfo['cust_id_f'] = result.customerData.id_f;
-        // this.saleDataInfo['cust_name_f'] = result.customerData.name_f;
+        this.saleDataInfo['cust_id_f'] = result.entityData.id_f;
+        this.saleDataInfo['cust_name_f'] = result.entityData.name_f;
+      }else if(val == 'salelist'){
+
+        this.saleDataInfo['cust_id_f'] = result.entityData.id_f;
+        this.saleDataInfo['cust_name_f'] = result.entityData.cust_name_f;
+        this.saleDataInfo['date_f'] = result.entityData.date_f;
       }
     });
   }

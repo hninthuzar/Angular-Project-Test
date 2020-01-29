@@ -55,18 +55,19 @@
                                 </div>
 
                                 <div class="form-group m-b-md text-right">
-                                    <button type="submit" mat-raised-button class="btn m-b-xs btn-success m-r-sm" (click)="openDialog()"><span>Save</span></button> 
+                                    <button type="submit" mat-raised-button class="btn m-b-xs btn-success m-r-sm" (click)="saveSaleDataList()"><span>Save</span></button> 
                                     <button type="submit" mat-raised-button class="btn m-b-xs btn-info m-r-sm" ><span>Update</span></button>
                                     <button mat-raised-button class="btn m-b-xs btn-danger "><span>Delete</span></button>
                                 </div>
                                 <div class="m-t-md">
-                                    <ejs-grid #grid [dataSource]='data' [selectionSettings]='selectionOptions' (rowSelected)='rowSelected($event)' [toolbar]='toolbar' [allowPaging]="true" [allowSorting]="true" [allowFiltering]="true" [editSettings]='editSettings' [pageSettings]='pageSettings' >
+                                    <ejs-grid #grid [dataSource]='itemDataList' [selectionSettings]='selectionOptions' (rowSelected)='rowSelected($event)' [toolbar]='toolbar' [allowPaging]="true" [allowSorting]="true" [allowFiltering]="true" [editSettings]='editSettings' [pageSettings]='pageSettings' >
                                         <e-columns>
                                         <e-column field='id_f' headerText='Item Code' textAlign='Right' width=120></e-column>
-                                        <e-column field='CustomerName' headerText='Item Name' isPrimaryKey='true'></e-column>
-                                        <e-column field='Type' headerText='Unit' isPrimaryKey='true'></e-column>                                        
-                                        <e-column field='SalePrice' headerText='Sale Price' width=150 [customAttributes]="{class: 'e-attr'}" format='C2' ></e-column>
-                                        <e-column field='ShipCity' headerText='Quantity' ></e-column>
+                                        <e-column field='code_f' headerText='Item Code' isPrimaryKey='true'></e-column>
+                                        <e-column field='name_f' headerText='Item Name' isPrimaryKey='true'></e-column>
+                                        <e-column field='unit_f' headerText='Unit' isPrimaryKey='true'></e-column>                                        
+                                        <e-column field='price_f' headerText='Sale Price' width=150 [customAttributes]="{class: 'e-attr'}" format='C2' ></e-column>
+                                        <e-column field='qty_f' headerText='Quantity' ></e-column>
                                         <e-column field='dis_per_f' headerText='Dis Per' ></e-column>
                                         <e-column field='dis_amt_f' headerText='Dis Amt ' ></e-column>
                                         <e-column field='total_amt_f' headerText='Total Amount' ></e-column>

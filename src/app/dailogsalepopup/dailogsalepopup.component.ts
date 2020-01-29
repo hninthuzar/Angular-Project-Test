@@ -3,7 +3,7 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { GridComponent, RowSelectEventArgs } from '@syncfusion/ej2-angular-grids';
 
 export interface DialogData {
-  customerData ;
+  entityData ;
   saleData;
 }
 
@@ -24,8 +24,8 @@ export class DailogsalepopupComponent implements OnInit {
     this.dialogRef.close();
   }
 
-  rowSelectedCust(args: RowSelectEventArgs) {
-    this.data.customerData = args.data;
+  rowSelectedEntity(args: RowSelectEventArgs) {
+    this.data.entityData = args.data;
   }
 
   rowSelectedSale(args: RowSelectEventArgs) {
