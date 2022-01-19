@@ -24,20 +24,23 @@ UI OverAll View
 <img align="center" width="450" src="https://github.com/hninthuzar/Angular-Project-Dev/blob/master/public-img/dashboard.png" alt="dashboard" />
 
 `customer`
-<img align="center" width="400" src="https://github.com/hninthuzar/Angular-Project-Dev/blob/master/public-img/customer.png" alt="customer" />
+<img align="center" width="450" src="https://github.com/hninthuzar/Angular-Project-Dev/blob/master/public-img/customer.png" alt="customer" />
+
 `category`
-<img align="center" width="400" src="https://github.com/hninthuzar/Angular-Project-Dev/blob/master/public-img/category.png" alt="category" />
+<img align="center" width="450" src="https://github.com/hninthuzar/Angular-Project-Dev/blob/master/public-img/category.png" alt="category" />
 
 
 `item`
-<img align="center" width="400" src="https://github.com/hninthuzar/Angular-Project-Dev/blob/master/public-img/item.png" alt="item" />
+<img align="center" width="450" src="https://github.com/hninthuzar/Angular-Project-Dev/blob/master/public-img/item.png" alt="item" />
+
 `sale`
-<img align="center" width="400" src="https://github.com/hninthuzar/Angular-Project-Dev/blob/master/public-img/sale.png" alt="sale" />
+<img align="center" width="450" src="https://github.com/hninthuzar/Angular-Project-Dev/blob/master/public-img/sale.png" alt="sale" />
 
 `settting`
-<img align="center" width="400" src="https://github.com/hninthuzar/Angular-Project-Dev/blob/master/public-img/setting.png" alt="sale" />
+<img align="center" width="450" src="https://github.com/hninthuzar/Angular-Project-Dev/blob/master/public-img/setting.png" alt="sale" />
+
 `helping`
-<img align="center" width="400" src="https://github.com/hninthuzar/Angular-Project-Dev/blob/master/public-img/helping.png" alt="sale" />
+<img align="center" width="450" src="https://github.com/hninthuzar/Angular-Project-Dev/blob/master/public-img/helping.png" alt="sale" />
 
 
 ```
@@ -45,11 +48,13 @@ Report
 ```
 
 `customer`
-<img align="center" width="400" src="https://github.com/hninthuzar/Angular-Project-Dev/blob/master/public-img/customer-report.png" alt="customer report" />
+<img align="center" width="450" src="https://github.com/hninthuzar/Angular-Project-Dev/blob/master/public-img/customer-report.png" alt="customer report" />
+
 `category`
-<img align="center" width="400" src="https://github.com/hninthuzar/Angular-Project-Dev/blob/master/public-img/category-report.png" alt="category report" />
+<img align="center" width="450" src="https://github.com/hninthuzar/Angular-Project-Dev/blob/master/public-img/category-report.png" alt="category report" />
 
 `item`
-<img align="center" width="400" src="https://github.com/hninthuzar/Angular-Project-Dev/blob/master/public-img/item-report.png" alt="item report" />
+<img align="center" width="450" src="https://github.com/hninthuzar/Angular-Project-Dev/blob/master/public-img/item-report.png" alt="item report" />
+
 `sale`
-<img align="center" width="400" src="https://github.com/hninthuzar/Angular-Project-Dev/blob/master/public-img/sale-report.png" alt="sale report" />
+<img align="center" width="450" src="https://github.com/hninthuzar/Angular-Project-Dev/blob/master/public-img/sale-report.png" alt="sale report" />
